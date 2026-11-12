@@ -1,0 +1,8 @@
+{
+  "name": "pokemon-pokedex-js",
+  "version": "1.0.0",
+  "description": "Un Pokédex simple en JavaScript avec sql.js",
+  "scripts": {
+    "dev": "npx --yes live-server --port=5500"
+  }
+}

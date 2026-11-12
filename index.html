@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="filter-container">
+        <h2 class="filter-title">🔍 Filtres Pokemon</h2>
+        <div class="filter-bar">
+
+            <div class="filter-group">
+                <label class="filter-label">Type</label>
+                <select class="filter-select" id="typeFilter">
+                    <option value="">Tous les types</option>
+                    <option value="Fire">Feu</option>
+                    <option value="Water">Eau</option>
+                    <option value="Grass">Plante</option>
+                    <option value="Electric">Électrik</option>
+                    <option value="Psychic">Psy</option>
+                    <option value="Ice">Glace</option>
+                    <option value="Dragon">Dragon</option>
+                    <option value="Dark">Ténèbres</option>
+                    <option value="Fairy">Fée</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Fighting">Combat</option>
+                    <option value="Poison">Poison</option>
+                    <option value="Ground">Sol</option>
+                    <option value="Flying">Vol</option>
+                    <option value="Bug">Insecte</option>
+                    <option value="Rock">Roche</option>
+                    <option value="Ghost">Spectre</option>
+                    <option value="Steel">Acier</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label class="filter-label">Génération</label>
+                <select class="filter-select" id="generationFilter">
+                    <option value="">Toutes générations</option>
+                    <option value="1">Génération I (Kanto)</option>
+                    <option value="2">Génération II (Johto)</option>
+                    <option value="3">Génération III (Hoenn)</option>
+                    <option value="4">Génération IV (Sinnoh)</option>
+                    <option value="5">Génération V (Unova)</option>
+                    <option value="6">Génération VI (Kalos)</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label class="filter-label">Légendaire</label>
+                <select class="filter-select" id="legendaryFilter">
+                    <option value="">Tous</option>
+                    <option value="True">Légendaires</option>
+                    <option value="False">Non-légendaires</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label class="filter-label">Total Stats</label>
+                <label for="minStats">min stats</label><input class="input-stats" id="minStats" maxlength="3">
+                <label for="maxStats">max stats</label><input class="input-stats" id="maxStats" maxlength="3">
+            </div>
+
+            <div class="filter-group">
+                <button class="clear-filters" id="clearFilters">🗑️ Effacer</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards-grid" id="cardsContainer">
+        <!-- Les Pokemon seront affichés ici -->
+    </div>
+
+    <script src="./lib/sql-wasm.js"></script>
+    <script type="module" src="pokemon.js"></script>
+</body>
+
+</html>
